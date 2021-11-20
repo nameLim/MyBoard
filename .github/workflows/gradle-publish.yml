@@ -5,11 +5,12 @@ name: myboard CI/CD Build
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
 
 name: Deploy String boot to Amazon EC2
 env:
-  PROJECT_NAME: action_codedeploy
+  PROJECT_NAME: MyBoard
   
 jobs:
   build:
