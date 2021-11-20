@@ -12,6 +12,6 @@ public class HomeController {
 //    public String home(Model model, @AuthenticationPrincipal UserDetailsImpl userDetails) {
 //        if(userDetails != null)
 //            model.addAttribute("username", userDetails.getUsername());
-//        return "index";
+//        return "index" ;
 //    }
 }
