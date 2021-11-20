@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>BOARD</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/board.css">
+
+</head>
+<body>
+<script th:inline="javascript">
+    /*<![CDATA[*/
+
+    // var username = /*[[${username}]]*/ ;
+    // console.log(username);
+
+    /*]]>*/
+</script>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">BOARD</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+    <div><span class="navbar-brand" th:text="${username}"></span></div>
+    <a id="logout-text" class="navbar-brand" href="/user/logout">LOG OUT</a>
+</nav>
+<section>
+    <div class="container" id="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-center mb-5">
+                <h2 class="heading-section">BOARD</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="table-wrap">
+                    <!--게시글 붙일 테이블-->
+                    <table class="table table-hover">
+                        <thead class="thead-green">
+                            <tr>
+                                <th>ID no.</th>
+                                <th>Post Title</th>
+                                <th>User NAME</th>
+                                <th>C/M Date</th>
+                                <th>&nbsp;</th>
+                            </tr>
+                        </thead>
+                        <tbody id="post-table-body">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>`
+    </div>
+</section>
+<section>
+    <div class="modal-footer container">
+        <button type="button" class="btn btn-primary" style="float:right" onclick="location.href='createPost.html'"> ADD POST </button>
+    </div>
+</section>
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script th:inline="javascript" src="js/index.js"></script>
+<script src="js/userPost.js"></script>
+<script src="js/createPost.js"></script>
+
+</body>
+</html>
+
