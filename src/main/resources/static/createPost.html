@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>MY BOARD</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/board.css">
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">CREATE MY BOARD</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
+                aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</nav>
+<section class="ftco-section">
+    <div class="form-group">
+        <label class="col-form-label col-form-label-lg mt-4" for="userId-input">User ID</label>
+        <input class="form-control form-control-lg" type="text" placeholder="Enter your id" id="userId-input">
+    </div>
+    <div class="form-group">
+        <label class="col-form-label col-form-label-lg mt-4" for="title-input">Title</label>
+        <input class="form-control form-control-lg" type="text" placeholder="Enter your id" id="title-input">
+    </div>
+    <div class="form-group">
+        <label for="content-textarea" class="form-label mt-4">Content</label>
+        <textarea class="form-control" id="content-textarea" rows="20"></textarea>
+    </div>
+</section>
+<section>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-primary" onclick="addPost()">Save changes</button>
+        <button type="button" class="btn btn-secondary" onclick="location.href='/'">Close</button>
+    </div>
+</section>
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!--<script src="js/index.js"></script>-->
+<script src="js/createPost.js"></script>
+<!--<script src="js/userPost.js"></script>-->
+
+
