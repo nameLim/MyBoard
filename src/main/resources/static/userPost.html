@@ -16,33 +16,57 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">MY BOARD</a>
+        <a class="navbar-brand" href='/'>BOARD</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
                 aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
     </div>
 </nav>
-<section class="ftco-section">
-    <div class="form-group">
-        <label class="col-form-label col-form-label-lg mt-4" for="user-userId-input">User ID</label>
-        <input class="form-control form-control-lg" type="text" placeholder="Enter your id" id="user-userId-input">
-        <label class="col-form-label col-form-label-lg mt-4" for="user-ModifyDate-input">C/M Date</label>
-        <input class="form-control form-control-lg" type="text" placeholder="Enter your id" id="user-ModifyDate-input">
-    </div>
-    <div class="form-group">
-        <label class="col-form-label col-form-label-lg mt-4" for="user-title-input">Title</label>
-        <input class="form-control form-control-lg" type="text" placeholder="Enter your id" id="user-title-input">
-    </div>
-    <div class="form-group">
-        <label for="user-content-textarea" class="form-label mt-4">Content</label>
-        <textarea class="form-control" id="user-content-textarea" rows="20"></textarea>
+<section class="modal-title ftco-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-center mb-5">
+                <h2 class="heading-section">MY BOARD</h2>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-form-label col-form-label-lg mt-4" for="user-userId-input">User NAME</label>
+            <input class="form-control form-control-lg" type="text" placeholder="Enter your id" id="user-userId-input">
+            <label class="col-form-label col-form-label-lg mt-4" for="user-ModifyDate-input">C/M Date</label>
+            <input class="form-control form-control-lg" type="text" placeholder="Enter your id" id="user-ModifyDate-input">
+        </div>
+        <div class="form-group">
+            <label class="col-form-label col-form-label-lg mt-4" for="user-title-input">Title</label>
+            <input class="form-control form-control-lg" type="text" placeholder="Enter your id" id="user-title-input">
+        </div>
+        <div class="form-group">
+            <label for="user-content-textarea" class="form-label mt-4">Content</label>
+            <textarea class="form-control" id="user-content-textarea" rows="20"></textarea>
+        </div>
     </div>
 </section>
 <section>
-    <div class="modal-footer">
-        <button type="button" class="btn btn-primary" onclick="location.href='/'">Back</button>
+    <div class="modal-footer container">
+        <!--게시글 수정-->
+<!--        <button id="updatePost" type="button" class="btn btn-primary" onclick="addComment()">MODIFY POST</button>-->
+        <!--전체 목록으로 돌아가기-->
+        <button type="button" class="btn btn-secondary" onclick="location.href='/'">BACK</button>
     </div>
+</section>
+<section>
+    <section>
+        <div class="form-group modal-footer container">
+            <textarea class="form-control" id="user-conmment-textarea" rows="10"></textarea>
+<!--            <button id="addComment" type="button" class="btn btn-primary" onclick="addComment()">ADD COMMENT</button>-->
+        </div>
+    </section>
+<!--    <section>-->
+<!--        <div class="container" id="post-conmments-body">-->
+<!--            &lt;!&ndash;댓글 달릴 곳&ndash;&gt;-->
+<!--        </div>-->
+<!--    </section>-->
+
 </section>
 <script src="js/jquery.min.js"></script>
 <script src="js/popper.js"></script>

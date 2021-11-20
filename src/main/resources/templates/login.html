@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+<!--    <link rel="stylesheet" type="text/css" href="/css/style.css">-->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/board.css">
+    <meta charset="UTF-8">
+    <title>로그인 페이지</title>
+</head>
+<body>
+    <section>
+        <div id="login-form" class="container">
+            <div id="login-title" class="col-md-6 text-center mb-5">
+                <h2 class="heading-section">Log into Board</h2>
+            </div>
+            <form action="/user/login" method="post">
+                <div class="form-group">Username
+                    <input type="text" name="username" placeholder="Username" class="form-control form-control-sm">
+                </div>
+                <div class="form-group">Password
+                    <input type="password" name="password" placeholder="Password" class="form-control form-control-sm">
+                </div>
+                <button id="login-id-submit" class="btn btn-primary">Login</button>
+            </form>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <button id="login-id-btn" class="btn btn-primary" onclick="location.href='/user/signup'">
+                Join
+            </button>
+<!--            <button id="login-kakao-btn" class="btn btn-warning" onclick="location.href='https://kauth.kakao.com/oauth/authorize?client_id=b50d8f8fa65cf9e3b9565506b87435c7&redirect_uri=http://52.79.199.239:8080/user/kakao/callback&response_type=code'">-->
+<!--                Kakao Login-->
+<!--            </button>-->
+        </div>
+    </section>
+    <div id="login-failed" style="display:none" class="alert alert-danger" role="alert">Please Check Username Or Password</div>
+
+</body>
+<script>
+    const href = location.href;
+    const queryString = href.substring(href.indexOf("?")+1)
+    if (queryString === 'error') {
+        const errorDiv = document.getElementById('login-failed');
+        errorDiv.style.display = 'block';
+    }
+    else if (queryString === 'unlogin') {
+        alert("로그인이 필요한 기능입니다.");
+    }
+</script>
+</html>

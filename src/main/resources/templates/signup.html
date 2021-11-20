@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/board.css">
+    <meta charset="UTF-8">
+    <title>회원가입 페이지</title>
+</head>
+<body>
+    <div class="container">
+        <div class="col-md-6 text-center mb-5">
+            <h2 class="heading-section">Sign up Board</h2>
+        </div>
+        <form action="/user/signup" method="post">
+            <div class="form-group">Username
+                <input type="text" name="username" th:value="${userDto?.username}" placeholder="Username" class="form-control form-control-sm">
+                <span th:text="${valid_username}"></span>
+                <span th:text="${exceptionMsg}"></span>
+            </div>
+            <div class="form-group">Password
+                <input type="password" name="password" th:value="${userDto?.password}" placeholder="Password" class="form-control form-control-sm">
+                <span th:text="${valid_password}"></span>
+            </div>
+            <div class="form-group">Check Password
+                <input type="password" name="password2" th:value="${userDto?.password2}" placeholder="Check Password" class="form-control form-control-sm">
+                <span th:text="${passwordMismatch}"></span>
+            </div>
+            <button id="login-id-submit" class="btn btn-primary">Join</button>
+        </form>
+    </div>
+</body>
+</html>
