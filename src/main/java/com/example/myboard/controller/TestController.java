@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
     @GetMapping("test")
     public String test() {
-        String testStr = " Hi~ aws 인스턴스 name 변경 후 app 속성 변경";
+        String testStr = " Hi~ codeploy restart";
         System.out.println(testStr);
         return testStr;
     }
