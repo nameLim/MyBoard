@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
     @GetMapping("test")
     public String test() {
-        String testStr = " Hi~ git 에서 env에 Project 명 추가";
+        String testStr = " Hi~ aws 인스턴스 name 변경 후 app 속성 변경";
         System.out.println(testStr);
         return testStr;
     }
