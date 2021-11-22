@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
     @GetMapping("/test")
     public String test() {
-        String testStr = "RDS 체크 배포";
+        String testStr = "RDS 체크 배포2";
         System.out.println(testStr);
         return testStr;
     }
