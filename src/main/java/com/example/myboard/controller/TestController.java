@@ -19,7 +19,7 @@ public class TestController {
 
     @GetMapping("/test")
     public String test() {
-        String testStr = "test1완료";
+        String testStr = "자바 설치 했음";
         System.out.println(testStr);
         return testStr;
     }
