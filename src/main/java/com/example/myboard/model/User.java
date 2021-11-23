@@ -34,6 +34,9 @@ public class User {
     @Column(unique = true)
     private Long kakaoId;
 
+    @Column(unique = false) // profile img path
+    private String profile;
+
     public User(String username, String password, UserRoleEnum role) {
         this.username = username;
         this.password = password;
