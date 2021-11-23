@@ -3,9 +3,9 @@ os: linux
 
 files:
   - source: /
-    destination: /home/ubuntu
+    destination: /home/ubuntu/myboard
 permissions:
-  - object: /home/ubuntu/
+  - object: /home/ubuntu/myboard/
     owner: ubuntu
     group: ubuntu
     mode: 755

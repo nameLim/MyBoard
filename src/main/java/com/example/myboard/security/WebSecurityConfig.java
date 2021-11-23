@@ -33,6 +33,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
         http.authorizeRequests()
                     .antMatchers("/test").permitAll()
+                    .antMatchers("/test2").permitAll()
                     .antMatchers("/").permitAll()
                     // image 폴더를 login 없이 허용
                     .antMatchers("/images/**").permitAll()
