@@ -25,7 +25,7 @@ public class MypageService {
 //    private final CardRepository cardRepository;
 //    private final HashTagRepositoty hashTagRepositoty;
 //    private final ImageService imageService;
-    private final UserService userService;
+//    private final UserService userService;
 
     // 회원 정보 가져오기
     // 가져오는 값 : 기본 회원정보(앞면카드), 모든 뒷면카드
