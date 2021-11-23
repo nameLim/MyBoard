@@ -27,7 +27,7 @@ public class TestController {
     @PostMapping("/test2")
     public String test2(@ModelAttribute FrontRequestCardDto frontRequestCardDto) throws IOException {
         mypageService.modifyFrontCard(frontRequestCardDto);
-        String testStr = "test2완료33333333333333333333";
+        String testStr = "tㄹㄹ33";
         System.out.println(testStr);
         return testStr;
     }
