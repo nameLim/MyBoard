@@ -19,7 +19,7 @@ public class TestController {
 
     @GetMapping("/test")
     public String test() {
-        String testStr = "자바 설치 했음";
+        String testStr = "자바 설치 했음222";
         System.out.println(testStr);
         return testStr;
     }
@@ -27,7 +27,7 @@ public class TestController {
     @PostMapping("/test2")
     public String test2(@ModelAttribute FrontRequestCardDto frontRequestCardDto) throws IOException {
         mypageService.modifyFrontCard(frontRequestCardDto);
-        String testStr = "tㄹㄷㄷㄷㄷㄹ33";
+        String testStr = "tㄹ33333";
         System.out.println(testStr);
         return testStr;
     }
