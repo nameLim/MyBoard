@@ -19,7 +19,7 @@ public class TestController {
 
     @GetMapping("/test")
     public String test() {
-        String testStr = "application.properies 변경";
+        String testStr = "application.properies 변경2";
         System.out.println(testStr);
         return testStr;
     }
