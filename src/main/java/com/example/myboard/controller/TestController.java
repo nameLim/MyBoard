@@ -19,7 +19,7 @@ public class TestController {
 
     @GetMapping("/test")
     public String test() {
-        String testStr = "yaml, shell 위치";
+        String testStr = "application.properies 변경";
         System.out.println(testStr);
         return testStr;
     }
