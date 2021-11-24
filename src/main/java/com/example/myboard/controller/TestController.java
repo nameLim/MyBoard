@@ -19,7 +19,7 @@ public class TestController {
 
     @GetMapping("/test")
     public String test() {
-        String testStr = ";테스트1의 결과_MyBoard";
+        String testStr = ";테스트1의 결과_MyBoardd";
         System.out.println(testStr);
         return testStr;
     }
