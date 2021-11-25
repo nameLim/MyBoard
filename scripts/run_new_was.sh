@@ -26,29 +26,8 @@ else
   kill -15 $TARGET_PID
 fi
 
-for RETRY_COUNT in 1 2 3 4 5 6 7 8 9 10
-do
-  nohup java -jar -Dserver.port=$TARGET_PORT /home/ubuntu/myboard/build/libs/*SNAPSHOT.jar &
-  echo "> #${RETRY_COUNT} trying..."
 
-  RESPONSE_CODE=$(curl -s -o /dev/null -w "%{http_code}" http://127.0.0.1:${TARGET_PORT}/health)
-  MY_RESPONSE_CODE=$(curl -s -o /dev/null -w "%{http_code}" http://13.124.233.40:${TARGET_PORT}/health)
-
-  echo "> TARGET_PORT :  ${TARGET_PORT}"
-  echo "> RESPONSE_CODE : ${RESPONSE_CODE}"
-  echo "> MY_RESPONSE_CODE : ${MY_RESPONSE_CODE}"
-
-   if [ ${RESPONSE_CODE} -eq 200 ]; then
-     echo "> New WAS successfully running"
-     exit 0
-  elif [ ${RETRY_COUNT} -eq 10 ]; then
-    echo "> Health check failed."
-    exit 1
-  fi
-  sleep 10
-done
-
-
+nohup java -jar -Dserver.port=$TARGET_PORT /home/ubuntu/myboard/build/libs/*SNAPSHOT.jar &
 
 
 echo "> Now new WAS runs at $TARGET_PORT."
