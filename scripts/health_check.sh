@@ -26,6 +26,7 @@ do
   RESPONSE_CODE=$(curl -s -o /dev/null -w "%{http_code}" http://127.0.0.1:${TARGET_PORT}/health)
   MY_RESPONSE_CODE=$(curl -s -o /dev/null -w "%{http_code}" http://13.125.38.216:${TARGET_PORT}/health)
 
+  echo "> TARGET_PORT :  ${TARGET_PORT}"
   echo "> RESPONSE_CODE : ${RESPONSE_CODE}"
   echo "> MY_RESPONSE_CODE : ${MY_RESPONSE_CODE}"
 
