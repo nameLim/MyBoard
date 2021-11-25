@@ -4,6 +4,7 @@ import com.example.myboard.dto.FrontRequestCardDto;
 import com.example.myboard.dto.FrontResponseCardDto;
 import com.example.myboard.service.MypageService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -14,6 +15,12 @@ import java.io.IOException;
 @RequiredArgsConstructor
 @RestController
 public class TestController {
+
+    @Value("${logging.module.version}")
+    String version;
+
+    @Value("${logging.module.version2}")
+    String version2;
 
     private final MypageService mypageService;
 
@@ -32,4 +39,17 @@ public class TestController {
         return testStr;
     }
 
+    @GetMapping("/autoPushTest")
+    public String autoPushTest() throws Exception
+    {
+        System.out.println("version : " + version);
+        System.out.println("version2 : " + version2);
+
+        return String.format("Project Version : %s", version);
+    }
+
+    @GetMapping("/health")
+    public String checkHealth() {
+        return "healthy자동배포 확인222222";
+    }
 }
