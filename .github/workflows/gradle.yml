@@ -50,4 +50,4 @@ jobs:
         run: aws s3 cp --region ap-northeast-2 ./$GITHUB_SHA.zip s3://myboard-bucket2/$PROJECT_NAME/$GITHUB_SHA.zip
 
       - name: Code Deploy
-        run: aws deploy create-deployment --application-name new_board --deployment-config-name CodeDeployDefault.AllAtOnce --deployment-group-name new_board_app_group --s3-location bucket=myboard-bucket2,bundleType=zip,key=$PROJECT_NAME/$GITHUB_SHA.zip
+        run: aws deploy create-deployment --application-name boardApp2 --deployment-config-name CodeDeployDefault.AllAtOnce --deployment-group-name boardApp_dev --s3-location bucket=myboard-bucket2,bundleType=zip,key=$PROJECT_NAME/$GITHUB_SHA.zip
