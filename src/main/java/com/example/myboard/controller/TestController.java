@@ -34,7 +34,7 @@ public class TestController {
     @PostMapping("/test2")
     public String test2(@ModelAttribute FrontRequestCardDto frontRequestCardDto) throws IOException {
         mypageService.modifyFrontCard(frontRequestCardDto);
-        String testStr = "이미지 테스트용 컨트롤러_";
+        String testStr = "이미지 테스트용 컨트롤러__";
         System.out.println(testStr);
         return testStr;
     }
