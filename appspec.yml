@@ -5,18 +5,18 @@ files:
   - source: /
     destination: /home/ubuntu/myboard
 
-#permissions:
-#  - object: /home/ubuntu/myboard/
-#    owner: ubuntu
-#    group: ubuntu
-#    mode: 755
-
 permissions:
-  - object: /
-    pattern: "**"
+  - object: /home/ubuntu/myboard/
     owner: ubuntu
     group: ubuntu
     mode: 755
+
+#permissions:
+#  - object: /
+#    pattern: "**"
+#    owner: ubuntu
+#    group: ubuntu
+#    mode: 755
 hooks:
   AfterInstall:
     # location은 프로젝트의 root경로를 기준
