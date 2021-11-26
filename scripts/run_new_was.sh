@@ -27,8 +27,8 @@ else
 fi
 
 
-nohup java -jar -Dserver.port=$TARGET_PORT /home/ubuntu/myboard/build/libs/*SNAPSHOT.jar &
-#nohup java -jar -Dserver.port=${TARGET_PORT} /home/ubuntu/myboard/build/libs/*SNAPSHOT.jar --spring.config.location=file:/home/ubuntu/myboard/build/libs/application.properties &
+#nohup java -jar -Dserver.port=$TARGET_PORT /home/ubuntu/myboard/build/libs/*SNAPSHOT.jar &
+nohup java -jar -Dserver.port=${TARGET_PORT} /home/ubuntu/myboard/build/libs/*SNAPSHOT.jar --spring.config.location=file:/home/ubuntu/myboard/build/libs/application.properties &
 
 echo "> Now new WAS runs at ${TARGET_PORT}."
 exit 0
