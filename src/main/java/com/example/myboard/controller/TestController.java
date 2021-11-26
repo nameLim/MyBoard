@@ -42,7 +42,7 @@ public class TestController {
     @GetMapping("/autoPushTest")
     public String autoPushTest() throws Exception
     {
-        System.out.println("version :   " +  version);
+        System.out.println("version : rr  " +  version);
         System.out.println("version2 : " + version2);
 
         return String.format("Project Version : %s", version);
